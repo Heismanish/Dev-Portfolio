@@ -1,4 +1,3 @@
-import { HoverEffect } from "@/components/contributions-card";
 import { ProjectCard } from "@/components/project-card";
 import Image from "next/image";
 import { DATA } from "@/data";

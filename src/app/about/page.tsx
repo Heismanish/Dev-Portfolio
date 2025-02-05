@@ -18,13 +18,6 @@ function Badge(props: any) {
   );
 }
 
-// async function Stars() {
-//   let res = await fetch('https://api.github.com/repos/karthikmudunuri/eldoraui');
-//   let json = await res.json();
-//   let count = Math.round(json.stargazers_count / 1000);
-//   return `${count}k stars`;
-// }
-
 export default function AboutPage() {
   return (
     <section>
@@ -33,12 +26,50 @@ export default function AboutPage() {
         <Markdown className="prose prose-neutral dark:prose-invert">
           {DATA.summary}
         </Markdown>
-        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
       </div>
+      {/* Hackathon */}
+      <h1 className="font-medium text-2xl mt-12 mb-4 tracking-tighter">
+        Hackathons
+      </h1>{" "}
+      <hr className="my-3 border-neutral-100 dark:border-neutral-800" />
+      <div className="prose prose-neutral dark:prose-invert">
+        {DATA.hackathons.map((hackathons, id) => (
+          <div key={hackathons.id} className="flex items-start mb-6">
+            {hackathons?.logo && (
+              <Image
+                src={hackathons.logo}
+                alt={hackathons.title}
+                height="80"
+                width="80"
+                className="rounded-full border-2 bg-white dark:bg-black dark:border-black border-white object-contain overflow-hidden aspect-square "
+              />
+            )}
 
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">
+            <div className="ml-4">
+              <h2 className="font-medium text-xl mb-1 tracking-tighter">
+                {hackathons.title}
+              </h2>
+
+              <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+                {hackathons.dates}, {hackathons.location}
+              </p>
+              <hr className="my-3 border-neutral-100 dark:border-neutral-800" />
+
+              <Markdown className="prose prose-neutral dark:prose-invert my-1">
+                {hackathons.description}
+              </Markdown>
+              <Markdown className="prose prose-neutral dark:prose-invert text-sm mt-1">
+                {hackathons.summary}
+              </Markdown>
+            </div>
+          </div>
+        ))}
+      </div>
+      {/* Education */}
+      <h1 className="font-medium text-2xl mt-12 mb-4 tracking-tighter">
         My Education
       </h1>
+      <hr className="my-3 border-neutral-100 dark:border-neutral-800" />
       <div className="prose prose-neutral dark:prose-invert">
         <Markdown className="prose prose-neutral dark:prose-invert">
           {DATA.educationsummary}

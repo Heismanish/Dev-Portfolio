@@ -2,7 +2,6 @@ import { Icons } from "@/components/icons";
 import {
   Code,
   HomeIcon,
-  Icon,
   NotebookPen,
   SquareTerminal,
   UserRound,
@@ -16,8 +15,7 @@ export const DATA = {
   description3: "",
   summary:
     "For over a year, I have been dedicated to mastering web technologies and enhancing my Data Structures and Algorithms (DSA) skills. I'm pursuing my B.Tech in **Information Technology** at [Guru Gobind Singh Indraprastha University (GGSIPU),Delhi](http://www.ipu.ac.in/)  where I have also worked on several impactful projects. My journey has been shaped by hands-on learning, building robust applications, and staying updated with the latest advancements in web development. I'm passionate about creating efficient, user-friendly solutions and continually challenging myself to grow as a developer.",
-  apperciation:
-    "Take a moment to explore the recognition I've garnered within the Twitter community for my work on [Eldora UI](https://eldoraui.site/). The positive feedback and appreciation from fellow developers and enthusiasts highlight the impact and value of the [EldoraUI](https://eldoraui.site/) project. It's rewarding to see the project being acknowledged and celebrated within the broader tech community!",
+
   footer:
     "Interested in learning more about my professional journey and skill set? [Click here to view my resume](/MANISH_KUMAR_GUPTA.pdf) and discover the experiences, achievements, and expertise that I bring to the table.",
   linkedin: [
@@ -36,6 +34,14 @@ export const DATA = {
       profile: "/_heismanish.jpeg",
     },
   ],
+  leetcode: [
+    {
+      title: "Leetcode",
+      href: "https://leetcode.com/u/heismanish/",
+      icon: "/leetcode.svg",
+      profile: "/leeetcodeProfile.jpeg",
+    },
+  ],
   projectSection: [
     {
       title: "Look at projects I've worked on",
@@ -46,28 +52,8 @@ export const DATA = {
   ],
   images: [
     {
-      title: "aiexpo",
-      href: "/aiexpo.jpeg",
-    },
-    {
       title: "Me",
       href: "/me.jpeg",
-    },
-    {
-      title: "My first day at my office during internship",
-      href: "/firstday.jpeg",
-    },
-    {
-      title: "our sumit at woxsen for discussing ideas",
-      href: "/ideasmeetup.jpeg",
-    },
-    {
-      title: "while exploring",
-      href: "/image6.jpeg",
-    },
-    {
-      title: "My working stuff",
-      href: "/work.jpeg",
     },
   ],
   Iconsvg: [
@@ -176,18 +162,24 @@ export const DATA = {
     },
     {
       id: 13,
+      title: "PostgreSQL",
+      href: "/pg.svg",
+      site: "https://www.postgresql.org/",
+    },
+    {
+      id: 14,
       title: "MongoDB",
       href: "/mongo.svg",
       site: "https://www.mongodb.com/",
     },
     {
-      id: 14,
+      id: 15,
       title: "Redis",
       href: "/redis.svg",
       site: "https://redis.io/",
     },
     {
-      id: 15,
+      id: 16,
       title: "Shadcn",
       href: "/shadcn.svg",
       site: "https://ui.shadcn.com/",
@@ -212,12 +204,7 @@ export const DATA = {
         icon: Icons.github,
         navbar: true,
       },
-      LinkedIn: {
-        name: "LinkedIn",
-        url: " https://www.linkedin.com/in/manish-kumar-gupta-47878320b/",
-        icon: Icons.linkedin,
-        navbar: true,
-      },
+
       X: {
         name: "X",
         url: "https://twitter.com/_heismanish",
@@ -238,10 +225,103 @@ export const DATA = {
       start: "2021",
       end: "2025",
     },
+    {
+      id: 2,
+      school: "Cambrian Public School",
+      href: "https://cambrianpublicschool.com/",
+      degree: "High Schooling",
+      logoUrl: "/school.png",
+      start: "2018",
+      end: "2020",
+    },
+    {
+      id: 3,
+      school: "Cambrian Public School",
+      href: "https://cambrianpublicschool.com/",
+      degree: "High Schooling",
+      logoUrl: "/school.png",
+      start: "2018",
+      end: "2020",
+    },
   ],
   projectssummary:
     "Explore my projects where ideas meet execution. Each project showcases my dedication to crafting impactful digital experiences, turning concepts into reality.",
   projects: [
+    {
+      title: "E-Comm Hub",
+      href: "https://github.com/Heismanish/e-commm",
+      dates: "December 2024 - January 2025",
+      active: true,
+      description:
+        "Built a full-stack e-commerce platform with secure authentication, product management, Stripe payments, and real-time order tracking. Utilized PostgreSQL with Prisma for database management and optimized API performance with caching techniques.",
+      iconLists: [
+        "/typescript.svg",
+        "/nodejs.svg",
+        "/expressjs.svg",
+        "/mongo.svg",
+        "/react-logo.svg",
+        "/tailwindcss.svg",
+        "/stripe.svg",
+      ],
+      links: [
+        {
+          type: "Visit Website",
+          href: "https://e-commm-ochre.vercel.app/",
+          icon: <SquareTerminal className="size-3" />,
+        },
+      ],
+      image: "/ecomm.png",
+      video: "",
+    },
+    {
+      title: "Chat App - PERN",
+      href: "https://github.com/Heismanish/pern-chat-app",
+      dates: "January 2025 - January 2025",
+      active: true,
+      description:
+        "Developed a real-time thief detection alarm system leveraging computer vision and deep learning. The project integrates a Next.js frontend with a webcam-based video feed to analyze live video streams and trigger alerts upon detecting suspicious activity.",
+      iconLists: [
+        "/react-logo.svg",
+        "/expressjs.svg",
+        "/nodejs.svg",
+        "/pg.svg",
+        "/tailwindcss.svg",
+        "/typescript.svg",
+        "/fm.svg",
+      ],
+      links: [
+        {
+          type: "visit website",
+          href: "https://thief-detection-alarm.example.com/",
+          icon: <SquareTerminal className="size-3" />,
+        },
+      ],
+      image: "/wip.png",
+      video: "",
+    },
+    {
+      title: "TweetGenAI",
+      href: "https://github.com/Heismanish/twitter-post-genai",
+      dates: "January 2025 - January 2025",
+      active: true,
+      description:
+        "Developed an AI-powered web application that generates engaging tweets based on user input, utilizing Google Generative AI and implementing rate limiting with Redis for fair use. Built with Next.js, TailwindCSS, and integrated REST API for seamless performance.",
+      iconLists: [
+        "/next-logo.svg",
+        "/tailwindcss.svg",
+        "/typescript.svg",
+        "/redis.svg",
+      ],
+      links: [
+        {
+          type: "visit website",
+          href: "https://twitter-post-genai.vercel.app/",
+          icon: <SquareTerminal className="size-3" />,
+        },
+      ],
+      image: "/tweetgen.png",
+      video: "",
+    },
     {
       title: "InstaNext",
       href: "https://github.com/Heismanish/snapchat",
@@ -263,8 +343,8 @@ export const DATA = {
           icon: <SquareTerminal className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://eldoraui.site/previews/components/core/eldoraui.mp4",
+      image: "/snapchat.png",
+      video: "",
     },
     {
       title: "Anime Bucket",
@@ -287,8 +367,45 @@ export const DATA = {
           icon: <SquareTerminal className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://eldoraui.site/previews/components/core/eldoraui.mp4",
+      image: "/anibucket.png",
+      video: "",
+    },
+    {
+      title: "Thief Detection Alarm",
+      href: "https://github.com/Heismanish/object-detection",
+      dates: "May 2024 - present",
+      active: true,
+      description:
+        "Developed a real-time thief detection alarm system leveraging computer vision and deep learning. The project integrates a Next.js frontend with a webcam-based video feed to analyze live video streams and trigger alerts upon detecting suspicious activity.",
+      iconLists: [
+        "/next-logo.svg",
+        "/tailwindcss.svg",
+        "/typescript.svg",
+        "/tensorflow.svg",
+      ],
+      links: [
+        {
+          type: "visit website",
+          href: "https://thief-detection-alarm.example.com/",
+          icon: <SquareTerminal className="size-3" />,
+        },
+      ],
+      image: "/object.png",
+      video: "",
+    },
+  ],
+  hackathons: [
+    {
+      id: 1,
+      title: "SIH 2023",
+      dates: "10th September 2023",
+      location: "Delhi, India",
+      description: "We reached to the zonal rounds of SIH 2023.",
+      logo: "/sih.png",
+      mlh: "https://github.com/Heismanish/sih-2023",
+      links: [],
+      summary:
+        "In September 2023, I participated in Smart India Hackathon (SIH), where my team and I built an online platform that gamifies education for children, helping them understand their legal rights.",
     },
   ],
 } as const;

@@ -3,7 +3,7 @@ import { DATA } from "@/data";
 import Image from "next/image";
 import Markdown from "react-markdown";
 import GitHubInfo from "@/components/githubinfo";
-import TweetList from "@/components/tweetlist";
+import Leetcode from "@/components/leetcode";
 
 function Badge(props: any) {
   return (
@@ -72,6 +72,57 @@ function LinkedinLink({
             <p className="font-medium text-neutral-900 dark:text-neutral-100">
               {name}
             </p>
+          </div>
+        </div>
+        <div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
+          <ArrowIcon />
+        </div>
+      </a>
+    </div>
+  );
+}
+
+function LeetcodeLink({
+  img,
+  link,
+  name,
+}: {
+  img: string;
+  link: string;
+  name: string;
+}) {
+  return (
+    <div className="group flex w-full">
+      <a
+        href={link}
+        target="_blank"
+        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
+      >
+        <div className="flex items-center space-x-3">
+          <div className="relative h-16">
+            <Image
+              alt={name}
+              src={img}
+              height={64}
+              width={64}
+              sizes="33vw"
+              className="h-16 w-16 rounded-full border object-cover border-neutral-200 dark:border-neutral-700"
+              priority
+            />
+            <div className="relative -right-10 -top-6 inline-flex h-6 w-6 items-center rounded-full border border-neutral-200 bg-white p-1 dark:border-neutral-700">
+              <img
+                alt="leetcode logo"
+                src={DATA.leetcode[0].icon}
+                width="14"
+                height="14"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <p className="font-medium text-neutral-900 dark:text-neutral-100">
+              {name}
+            </p>
+            <Leetcode />
           </div>
         </div>
         <div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
@@ -184,7 +235,7 @@ export default function Page() {
           ))}
         </div>
       </div>
-      <div className="my-8 flex w-full flex-col space-x-0 space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+      <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
         <GithubLink
           img={DATA.github[0].profile}
           name={DATA.github[0].title}
@@ -194,6 +245,11 @@ export default function Page() {
           img={DATA.linkedin[0].profile}
           name={DATA.linkedin[0].title}
           link={DATA.linkedin[0].href}
+        />
+        <LeetcodeLink
+          img={DATA.leetcode[0].profile}
+          name={DATA.leetcode[0].title}
+          link={DATA.leetcode[0].href}
         />
       </div>
 

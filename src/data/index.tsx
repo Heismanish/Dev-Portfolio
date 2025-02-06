@@ -236,12 +236,12 @@ export const DATA = {
     },
     {
       id: 3,
-      school: "Cambrian Public School",
-      href: "https://cambrianpublicschool.com/",
-      degree: "High Schooling",
-      logoUrl: "/school.png",
-      start: "2018",
-      end: "2020",
+      school: "St. Francis Senior Secondary School",
+      href: "https://www.sfsanpara.com/",
+      degree: "Matriculation",
+      logoUrl: "/sfs.png",
+      start: "2013",
+      end: "2018",
     },
   ],
   projectssummary:
